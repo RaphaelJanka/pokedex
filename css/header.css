@@ -1,0 +1,186 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d1292e;
+    padding: 0 160px;
+    box-shadow: 0px 3px 10px 3px black;
+    z-index: 10;
+}
+
+
+.header-logo-container {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30px;
+    gap: 16px;
+}
+
+
+.header-img {
+    height: 72px;
+}
+
+
+.input-container {
+    border-radius: 20px;
+    background-color: rgb(210 245 255);
+    padding: 10px 24px;
+    border: 2px solid #4a4949;
+}
+
+
+input {
+    border: 0;
+    outline: none;
+    height: 56px;
+    width: 360px;
+    background-color: #ffffff00;
+    font-size: 23px;
+}
+
+
+input::placeholder {
+    font-size: 23px;
+}
+
+
+.bubble-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+
+.bubble-border {
+    border: 3px solid black;
+    border-radius: 100%;
+}
+
+
+.bubble-red {
+    position: relative;
+    background-color: #c50404;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    animation: changeColorRed 4s infinite;
+    cursor: pointer;
+}
+
+
+.bubble-red:hover {
+    animation-play-state: paused;
+    box-shadow: 0 0 5px 5px red !important;
+    background-color: #c50404 !important;
+}
+
+
+.bubble-red:active {
+    background-color: red !important;
+}
+
+
+.bubble-yellow {
+    position: relative;
+    background-color: #ffd800;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    animation: changeColorYellow 4s infinite 1s;
+    cursor: pointer;
+}
+
+
+.bubble-yellow:hover {
+    animation-play-state: paused;
+    background-color: #ffd800 !important;
+    box-shadow: 0 0 4px 4px yellow;
+}
+
+
+.bubble-yellow:active {
+    background-color: yellow !important;
+}
+
+
+.bubble-green {
+    position: relative;
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    animation: changeColorGreen 4s infinite 2s;
+    cursor: pointer;
+}
+
+
+.bubble-green:hover {
+    animation-play-state: paused;
+    box-shadow: 0 0 4px 4px #00ff00;
+    background-color: green !important;
+}
+
+
+.bubble-green:active {
+    background-color: #00ff00 !important;
+}
+
+.bubble-white {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: white;
+    top: 8px;
+    left: 4px;
+    rotate: -40deg;
+}
+
+
+@keyframes changeColorYellow {
+    0% {
+        background-color: #ffd800;
+    }
+    75% {
+        background-color: yellow;
+        box-shadow: 0 0 4px 4px yellow;
+    }
+    100% {
+        background-color: #ffd800;
+    }
+}
+
+
+@keyframes changeColorRed {
+    0% {
+        background-color: #c50404;
+    }
+    75% {
+        background-color: red;
+        box-shadow: 0 0 3px 5px red;
+    }
+    100% {
+        background-color: #c50404;
+    }
+}
+
+
+@keyframes changeColorGreen {
+    0% {
+        background-color: green;
+    }
+    75% {
+        background-color: #00ff00;
+        box-shadow: 0 0 4px 4px #00ff00;
+    }
+    100% {
+        background-color: green;
+    }
+}

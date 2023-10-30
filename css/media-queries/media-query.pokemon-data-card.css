@@ -1,0 +1,71 @@
+@media (max-width: 450px) {
+    .pokemondata-container {
+        width: 300px;
+    }
+    .poke-stat-container {
+        gap: 12px;
+    }
+    .pokecard-info-buttons {
+        font-size: 12px;
+    }
+    .evo-img {
+        width: 80px;
+        height: 80px;
+    }
+    .full-chart-line {
+        width: 150px;
+    }
+    .pokecard-info-button-container {
+        padding: 0 15px;
+    }
+    .next-arrow {
+        right: 20px;
+    }
+    .back-arrow {
+        left: 20px;
+    }
+    .img-shiny {
+        height: 120px;
+    }
+    .img-regular {
+        height: 120px;
+    }
+    .pokemondata-img {
+        height: 230px;
+    }
+}
+
+
+@media (max-height: 850px) {
+    #pokemondatacard {
+        margin-top: 80px;
+    }
+}
+
+
+@media (max-height: 750px) {
+    #pokemondatacard {
+        margin-top: 100px;
+    }
+}
+
+
+@media (max-height: 720px) {
+    .pokedatacard {
+        overflow-y: scroll;
+    }
+    .pokedatacard::-webkit-scrollbar {
+        display: none;
+    }
+    #pokemondatacard {
+        margin-top: 300px;
+        margin-bottom: 50px;
+    }
+}
+
+
+@media (max-height: 600px) {
+    #pokemondatacard {
+        margin-top: 400px;
+    }
+}

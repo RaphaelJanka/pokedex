@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/pokemon-card.css">
+    <link rel="stylesheet" href="../css/pokemon-data-card.css">
+    <link rel="stylesheet" href="../css/media-queries/media-query.pokemon-data-card.css">
+    <link rel="stylesheet" href="../css/media-queries/media-query.header.css">
+    <link rel="icon" href="../img/pokemon-3418266_1280.png">
+    <script src="../js/const.js"></script>
+    <script src="../js/templates.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <script src="../js/script.js"></script>
+    <script src="../js/script-part2.js"></script>
+</head>
+<body onload="init()">
+    <header>
+        <div class="header-logo-container">
+            <img src="../img/pokemon-3418266_1280.png" alt="pokeball" class="header-img">
+            <span class="logo">Pokédex</span>
+        </div>    
+        <div>
+            <div class="input-container">
+                <input id="search" type="text" placeholder='"ID" or "name"' oninput="searchPokemon()">
+            </div> 
+        </div>
+        <div class="bubble-box">
+            <a href="../html/privacy-policy.html" class="bubble-border">
+                <div class="bubble-red">
+                    <div class="bubble-white"></div>
+                </div>
+            </a>
+            <a href="../html/legal-notice.html" class="bubble-border">
+                <div class="bubble-yellow">
+                    <div class="bubble-white"></div>
+                </div>
+            </a>
+            <div class="bubble-border">
+                <div class="bubble-green">
+                    <div class="bubble-white"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+        <section id="pokedex"></section>
+
+        <section id="pokemondatacard-bg" onclick="closePokemonDatacard()" class="pokedatacard d-none">
+            <div id="pokemondatacard" onclick="doNotClose(event)"></div>
+        </section>
+        <img id="loading-spinner" src="../img/pokemon-3418266_1280.png" alt="Loading" class="spinner">
+        <div id="loading-overlay"></div>
+        <section id="button" class="button-box">
+            <button onclick="loadMorePokemon()" class="load-button">More Pokémon</button>
+            <img onclick="scrollToTop()" src="../img/pokestop.png" alt="pokestop" class="pokestop">
+        </section>
+    </main>
+</body>
+</html>

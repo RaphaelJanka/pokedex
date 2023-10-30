@@ -1,0 +1,130 @@
+body {
+    background-color: rgb(0 153 194 / 42%);
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}  
+
+
+main {
+    margin-top: 190px;
+}
+
+
+#pokedex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+
+.button-box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    bottom: 20px;
+}
+
+
+.pokestop {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    height: 64px;
+    padding: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+.pokestop:hover {
+    background-color: #40404066;
+    padding: 8px;
+    border-radius: 50px;
+}
+
+.spinner {
+    display: none; 
+    position: fixed; 
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%) rotate(0deg); 
+    z-index: 1000;
+    height: 200px;
+    animation: spin 1s linear infinite; 
+}
+
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    display: none;
+    z-index: 1;
+}
+
+
+.load-button {
+    background-color: #4b4b4be3;
+    outline: none;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 8px 16px;
+    font-size: 23px;
+    color: white;
+}
+
+
+.load-button:hover {
+    color: rgb(191, 190, 190);
+}
+
+
+.load-button:active {
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-corner {
+  background-color: #4f4e4e;
+}
+
+
+::-webkit-scrollbar-track {
+   background-color: #4f4e4e;
+}
+
+
+::-webkit-scrollbar-thumb {
+   background-color: #d1292e;
+}
+
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+@media (max-width: 1280px) {
+    main {
+        margin-top: 130px;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .pokestop {
+        display: none;
+    }
+}

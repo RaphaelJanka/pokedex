@@ -1,0 +1,94 @@
+@media (max-width: 1280px) {
+    header {
+        height: 100px;
+        padding: 0 100px;
+    }
+    .bubble-border {
+        border: 2px solid black;
+    }
+    .bubble-red {
+        height: 40px;
+        width: 40px;
+    }
+    .bubble-yellow {
+        height: 40px;
+        width: 40px;
+    }
+    .bubble-green {
+        height: 40px;
+        width: 40px;
+        
+    }
+    .bubble-white {
+        width: 18px;
+        height: 8px;
+        top: 7px;
+        left: 3px;
+    }
+    .input-container {
+        padding: 6px 16px;
+        border: 1px solid #4a4949;
+    }
+    input {
+        height: 32px;
+        width: 224px;
+        font-size: 16px;
+    }
+    input::placeholder {
+        font-size: 16px;
+    }
+}
+
+
+@media (max-width: 900px) {
+    header {
+      padding: 0 50px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .bubble-red {
+        height: 30px;
+        width: 30px;
+    }
+    .bubble-yellow {
+        height: 30px;
+        width: 30px;
+    }
+    .bubble-green {
+        height: 30px;
+        width: 30px;
+    }
+    .bubble-white {
+        width: 14px;
+        height: 6px;
+        top: 5px;
+        left: 2px;
+    }
+    input {
+        height: 20px;
+        width: 160px;
+    }
+}
+
+
+@media (max-width: 700px) {
+    .logo {
+        display: none;
+    }
+}
+
+
+@media (max-width: 550px) {
+    .input-container {
+        display: none;
+    }
+}
+
+
+@media (max-width: 500px) {
+   header {
+    padding: 0 25px;
+   }
+}
