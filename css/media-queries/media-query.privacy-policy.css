@@ -1,0 +1,19 @@
+@media (max-width: 550px) {
+    h1 {
+        font-size: 58px;
+    }
+    .link {
+        font-size: 12px;
+    }
+}
+
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 39px;
+    }
+    .link {
+        font-size: 9px;
+    }
+}
+

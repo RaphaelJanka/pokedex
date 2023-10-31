@@ -1,4 +1,3 @@
-
 /**
  * This function renders the base-stat-section
  * @param {number} i 
@@ -210,6 +209,12 @@ function lastPokemonCard(i) {
 }
 
 
+/**
+ * This function renders the evolution-section
+ * @param {number} i 
+ * @param {string} pokemonType1 
+ * @param {string} pokemonType2 
+ */
 async function openEvolution(i, pokemonType1, pokemonType2) {
     let evolutionContainer = document.getElementById(`pokemoncard-info-${i}`);
     let allEvolutions = [];
@@ -224,6 +229,10 @@ async function openEvolution(i, pokemonType1, pokemonType2) {
 }
 
 
+/**
+ * This function renders all img of the specific evolution chain
+ * @param {array} array 
+ */
 async function renderEvolutionImg(array) {
     let evolutionContent = document.getElementById('evolutionStages');
     for (let pokemonName of array) {
@@ -235,6 +244,12 @@ async function renderEvolutionImg(array) {
     };
 }
 
+
+/**
+ * This function loads the evolution chain of a specific pokémon
+ * @param {string} array 
+ * @param {number} i 
+ */
 async function loadAllEvolutionChains(array, i) {
     const json = await listOfPokemon[i];
     const pokemonName = json.name;
@@ -250,6 +265,11 @@ async function loadAllEvolutionChains(array, i) {
 }
 
 
+/**
+ * This function sends an error message in case no url was found
+ * @param {url} responseUrl 
+ * @returns 
+ */
 function checkAvailibilityOfUrl(responseUrl) {
     if (!responseUrl) {
         console.error("Evolution chain URL not found");
@@ -257,11 +277,24 @@ function checkAvailibilityOfUrl(responseUrl) {
       }
 }
 
+
+/**
+ * This function pushes the specific evolution chain into the array all evolutions
+ * @param {array} array 
+ * @param {json} chain 
+ */
 function pushChainIntoArray(array, chain) {
     chain.species ? array.push(chain.species.name) : '';
     chain.evolves_to[0] && chain.evolves_to[0].species ? array.push(chain.evolves_to[0].species.name) : '';
     chain.evolves_to[0] && chain.evolves_to[0].evolves_to[0] && chain.evolves_to[0].evolves_to[0].species ? array.push(chain.evolves_to[0].evolves_to[0].species.name) : '';
 }
+
+
+/**
+ * THis function gets the specific pokémon id
+ * @param {string} pokemonName 
+ * @returns id
+ */
 async function getPokemonId(pokemonName) {
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
     const response = await fetch(url);

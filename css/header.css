@@ -18,13 +18,14 @@ header {
     display: flex;
     align-items: center;
     color: white;
-    font-size: 30px;
+    font-size: 44px;
     gap: 16px;
 }
 
 
 .header-img {
-    height: 72px;
+    /* height: 72px; */
+    height: 100px;
 }
 
 

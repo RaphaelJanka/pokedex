@@ -1,8 +1,3 @@
-/* Todos:
-- Pfeile bei erstem und letztem Bild entfernen
-- funktionen kürzen
-*/
-
 let listOfPokemon = [];
 let isLoading = false;
 
@@ -10,7 +5,8 @@ let isLoading = false;
 /**
  * This function initializes all Pokémon cards
  */
-function init() {
+async function init() {
+    await includeHTML();
     loadPokemon();
 }
 
