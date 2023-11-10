@@ -255,6 +255,7 @@ function openAbout(i, pokemonType1, pokemonType2) {
     let pokemonAbility2 = getSecondAbility(pokemon);
     let pokemonAbility3 = getThirdAbility(pokemon);
     let typeColor1 = typeColorBackground2[pokemonType1];
+    debugger;
     let typeColor2 = getTypeColor2ForDataSections(pokemonType1, pokemonType2);
     aboutContent.innerHTML = showAbout(pokemonHeight, pokemonWeight, pokemonAbility1, pokemonAbility2, pokemonAbility3, typeColor1, typeColor2); 
     setButtonColor('about', i);

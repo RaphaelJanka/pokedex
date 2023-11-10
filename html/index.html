@@ -6,6 +6,7 @@
     <title>Pokédex</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/pokemon-card.css">
     <link rel="stylesheet" href="../css/pokemon-data-card.css">
     <link rel="stylesheet" href="../css/media-queries/media-query.pokemon-data-card.css">
@@ -22,7 +23,6 @@
 <body onload="init()">
     <div w3-include-html="../html/header.html"></div>
 
-
     <main id="top">
         <section id="pokedex"></section>
 
@@ -31,10 +31,12 @@
         </section>
         <img id="loading-spinner" src="../img/pokemon-3418266_1280.png" alt="Loading" class="spinner">
         <div id="loading-overlay"></div>
-        <section id="button" class="button-box">
-            <button onclick="loadMorePokemon()" class="load-button">More Pokémon</button>
-            <img onclick="scrollToTop()" src="../img/pokestop.png" alt="pokestop" class="pokestop">
-        </section>
     </main>
+    
+    <section id="button" class="button-box">
+        <button onclick="loadMorePokemon()" class="load-button">More Pokémon</button>
+        <img onclick="scrollToTop()" src="../img/pokestop.png" alt="pokestop" class="pokestop">
+    </section>
+    <div w3-include-html="../html/footer.html"></div>
 </body>
 </html>

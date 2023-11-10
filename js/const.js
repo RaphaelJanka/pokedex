@@ -62,7 +62,7 @@ const soloTypeBackground1 = {
     poison: '#5e3c7c',
 }
 
-// about, base-stat & forms backgrounds
+// about, base-stat, forms & evolution backgrounds
 
 const soloTypeBackground2 = {
     normal: '#82828240',
@@ -75,7 +75,7 @@ const soloTypeBackground2 = {
     steel: '#64646740',
     fairy: '#ae66aa40',
     dragon: '#14245740',
-    fighting: '#ff81009240',
+    fighting: '#ff810092',
     dark: '#231d1d40',
     ghost: '#3f293f40',
     psychic: '#b5576940',

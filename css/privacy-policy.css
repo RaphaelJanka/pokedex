@@ -1,0 +1,17 @@
+.pokestop {
+    position: absolute;
+    top: 260px;
+    right: 30px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 50px;
+    cursor: pointer;
+    rotate: -90deg;
+}
+
+
+.pokestop:hover {
+    background-color: #40404066;
+    padding: 8px;
+    border-radius: 50px;
+}
