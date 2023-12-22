@@ -34,38 +34,3 @@
         height: 230px;
     }
 }
-
-
-@media (max-height: 850px) {
-    #pokemondatacard {
-        margin-top: 80px;
-    }
-}
-
-
-@media (max-height: 750px) {
-    #pokemondatacard {
-        margin-top: 100px;
-    }
-}
-
-
-@media (max-height: 720px) {
-    .pokedatacard {
-        overflow-y: scroll;
-    }
-    .pokedatacard::-webkit-scrollbar {
-        display: none;
-    }
-    #pokemondatacard {
-        margin-top: 300px;
-        margin-bottom: 50px;
-    }
-}
-
-
-@media (max-height: 600px) {
-    #pokemondatacard {
-        margin-top: 400px;
-    }
-}

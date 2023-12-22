@@ -192,4 +192,12 @@ function showForms(pokemonImg, pokemonImgShiny, typeColor1, typeColor2) {
     `;
 }
 
+function showNoPokemonResult() {
+    return /*html*/ `
+        <div class="no-result-container">
+            <span>No Pokemon found</span>
+        </div>
+    `;
+}
+
 

@@ -1,3 +1,5 @@
+let pokemonFound = false;
+
 /**
  * This function renders the base-stat-section
  * @param {number} i 
@@ -120,6 +122,7 @@ function scrollToTop() {
  * This function searches for Pokémon 
  */
 function searchPokemon() {
+    pokemonFound = false;
     let input = document.getElementById('search');
     if (input.length !== 0) {
         filterPokemon();
@@ -158,6 +161,7 @@ function showFilteredPokemon(search, filter) {
         let typeColorIcons2 = getTypeColorIcons2(pokemonType2);
         renderFilteredPokemon(search, filter, pokemonName, pokemonId, pokemonImg, pokemonType1, pokemonType2, typeColorIcons1, typeColorIcons2, typeColor1, typeColor2, i)
     }
+    foundNoResult(filter);
 }
 
 
@@ -179,6 +183,17 @@ function showFilteredPokemon(search, filter) {
 function renderFilteredPokemon(search, filter, pokemonName, pokemonId, pokemonImg, pokemonType1, pokemonType2, typeColorIcons1, typeColorIcons2, typeColor1, typeColor2, i) {
     if (pokemonName.toLowerCase().includes(search) || pokemonId.toString().includes(search)) {
         filter.innerHTML += showPokemonCard(pokemonName, pokemonId, typeColor1, typeColor2, typeColorIcons1, typeColorIcons2, pokemonType1, pokemonType2, pokemonImg, i);
+        pokemonFound = true;
+    } 
+}
+
+/**
+ * This functions renders a no found message in case no pokemon was found
+ * @param {HTMLElement} filter 
+ */
+function foundNoResult(filter) {
+    if (!pokemonFound) {
+        filter.innerHTML = showNoPokemonResult();
     }
 }
 
